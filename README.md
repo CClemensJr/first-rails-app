@@ -25,3 +25,11 @@ public - static files can be stored here
 test - the test will live her is using Test::Unit
 tmp - Temporary cached files
 vendor - Stores code we do not control. Generally unused due to gems
+#######################################
+NOTES:
+* When a Rails server gets a request from a web browser if first goes to the router
+* REST = REpresentational State Transfer
+* In the router _path is always preferred to _url
+* An ERB clause starts with <% or <%= and ends with %>
+If the clause started with <%, the result of the ruby code will be hidden
+If the clause started with <%=, the result of the ruby code will be output in place of the clause
