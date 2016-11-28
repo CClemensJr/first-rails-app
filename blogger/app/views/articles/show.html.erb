@@ -1,10 +1,16 @@
-<h1><%= @article.title %></h1>
-<br><p>
+<h1><%= @article.title %></h1><br>
+<p>
   Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p><br>
+<p>
+  <% if @article.image.exists? %>
+    <%= image_tag @article.image.url %>
+  <% end %>
+</p><br>
+
 <p><%= @article.body %></p><br><br>
 
 <h3>Comments (<%= @article.comments.size %>)</h3>
